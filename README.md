@@ -4,11 +4,9 @@ A responsive e-commerce website for browsing and purchasing books across various
 
 ## Live Demo
 
-**[Experience Booklet Store Now](https://binibiningjenna.github.io/booklet)**
+**[Experience Booklet Store Now](https://binibiningjenna.github.io/booklet/v1-static/)**
 
-![Booklet ](assets/img/image.png)
-
-## Tech Stack
+![Booklet ](v1-static/assets/img/image.png)
 
 ## Technology Stack
 
@@ -22,7 +20,7 @@ A responsive e-commerce website for browsing and purchasing books across various
 | ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=flat&logo=bootstrap&logoColor=white)    | Responsive layout     | All pages               |
 | ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?style=flat&logo=github&logoColor=white) | Hosting               | Live deployment         |
 
-### Version 2 (PHP Fullstack)
+### Version 2 (PHP)
 
 | Technology                                                                                               | Purpose           | Used in                    |
 | -------------------------------------------------------------------------------------------------------- | ----------------- | -------------------------- |
@@ -53,50 +51,41 @@ A responsive e-commerce website for browsing and purchasing books across various
 
 ## Dual Version Architecture
 
-```
-booklet/
-├── assets/ # Version 1 Resources
-│ ├── css/styles.css
-│ ├── js/
-│ │ ├── data.js
-│ │ └── populate.js
-│ └── img/
+```booklet/
+├── v1-static/          # Original static version (hosted)
+│   ├── assets/         # CSS, JS, images
+│   └── index.html      # Entry point
 │
-├── version-2/ # Version 2 (PHP)
-│ ├── BE/ # Backend
-│ │ ├── booklet.sql
-│ │ ├── categories.php
-│ │ ├── connect.php
-│ │ └── products.php
-│ │
-│ └── FE/ # Frontend
-│ ├── img/
-│ ├── index.html
-│ ├── script.js
-│ └── styles.css
+├── v1-php/             # PHP fullstack version
+│   ├── BE/             # Backend
+│   │   ├── booklet.sql
+│   │   ├── categories.php
+│   │   ├── connect.php
+│   │   └── products.php
+│   │
+│   └── FE/             # Frontend
+│       ├── img/        # Book covers
+│       ├── script.js   # Updated fetch logic
+│       ├── styles.css
+│       └── index.html
 │
-├── index.html # Version 1 Entry
-└── README.md
+└── README.md           # This documentation
 ```
 
-## 🚀 Version Access
+## Dual Version System
 
-### Version 1 (Static Frontend)
+### v1-static (Hosted Frontend)
+- **Location**: `/v1-static`
+- **Tech**: HTML/CSS/JS
+- **Access**: [Live Demo](https://binibiningjenna.github.io/booklet/v1-static/)
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Hosted-green)](https://binibiningjenna.github.io/booklet)
-
-- **Instant Access**: Loads automatically from root `index.html`
-- **Tech**: Pure HTML/CSS/JS
-- **Data**: Static JSON (`data.js`)
-
-### Version 2 (PHP Fullstack)
-
-[![Local Setup](https://img.shields.io/badge/Version_2-Local_Setup-blue)]()
-
-- **Requires**:
+### v1-php (Fullstack Local)
+- **Location**: `/v1-php`
+- **Tech**: PHP/MySQL + Frontend
+- **Setup**:
   ```bash
-  php -S localhost:8000 -t version-2/FE/
-  ```
+  cd v1-php/FE
+  php -S localhost:8000
 
 ## Quick Start
 
